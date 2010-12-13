@@ -1,5 +1,8 @@
 # Math Spam Protection
 
+NOTE: this is alpha and not designed for production just yet. Please see the TODO.md
+file for remaining issues.
+
 ## Maintainers
 
  * Will Rossiter (Nickname: willr, wrossiter)
