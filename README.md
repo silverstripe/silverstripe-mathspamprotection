@@ -16,8 +16,8 @@ Includes an EditableMathSpamField to integrate with the UserForms module.
 
 ## Requirements
 
- * Spam Protection 0.3+
- * SilverStripe 2.4.0+
+ * Spam Protection Trunk
+ * SilverStripe Trunk
 
 ## Installation
 
