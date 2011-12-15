@@ -2,27 +2,27 @@
 
 global $lang;
 
-$lang['en_US']['MathSpamProtection']['ZERO'] = 			'nul';
-$lang['en_US']['MathSpamProtection']['ONE'] = 			'een';
-$lang['en_US']['MathSpamProtection']['TWO'] = 			'twee';
-$lang['en_US']['MathSpamProtection']['THREE'] = 		'drie';
-$lang['en_US']['MathSpamProtection']['FOUR'] = 			'vier';
-$lang['en_US']['MathSpamProtection']['FIVE'] = 			'vijf';
-$lang['en_US']['MathSpamProtection']['SIX'] = 			'zes';
-$lang['en_US']['MathSpamProtection']['SEVEN'] = 		'zeven';
-$lang['en_US']['MathSpamProtection']['EIGHT'] = 		'acht';
-$lang['en_US']['MathSpamProtection']['NINE'] = 			'negen';
-$lang['en_US']['MathSpamProtection']['TEN'] = 			'tien';
-$lang['en_US']['MathSpamProtection']['ELEVEN'] = 		'elf';
-$lang['en_US']['MathSpamProtection']['TWELVE'] = 		'twaalf';
-$lang['en_US']['MathSpamProtection']['THIRTEEN'] = 	'dertien';
-$lang['en_US']['MathSpamProtection']['FOURTEEN'] = 	'veertien';
-$lang['en_US']['MathSpamProtection']['FIFTEEN'] = 	'vijftien';
-$lang['en_US']['MathSpamProtection']['SIXTEEN'] = 	'zestien';
-$lang['en_US']['MathSpamProtection']['SEVENTEEN'] = 'zeventien';
-$lang['en_US']['MathSpamProtection']['EIGHTEEN'] = 	'achttien';
-$lang['en_US']['MathSpamProtection']['WHATIS'] = 'Hoeveel is %s plus %s?';
-$lang['en_US']['MathSpamProtectionField']['SPAMQUESTION'] = 'Anti-spam vraag: %s';
-$lang['en_US']['MathSpamProtectionField']['INCORRECTSOLUTION'] = 'Onjuist antwoord op de anti-spam vraag, probeer opnieuw.';
+$lang['nl_NL']['MathSpamProtection']['ZERO'] = 			'nul';
+$lang['nl_NL']['MathSpamProtection']['ONE'] = 			'een';
+$lang['nl_NL']['MathSpamProtection']['TWO'] = 			'twee';
+$lang['nl_NL']['MathSpamProtection']['THREE'] = 		'drie';
+$lang['nl_NL']['MathSpamProtection']['FOUR'] = 			'vier';
+$lang['nl_NL']['MathSpamProtection']['FIVE'] = 			'vijf';
+$lang['nl_NL']['MathSpamProtection']['SIX'] = 			'zes';
+$lang['nl_NL']['MathSpamProtection']['SEVEN'] = 		'zeven';
+$lang['nl_NL']['MathSpamProtection']['EIGHT'] = 		'acht';
+$lang['nl_NL']['MathSpamProtection']['NINE'] = 			'negen';
+$lang['nl_NL']['MathSpamProtection']['TEN'] = 			'tien';
+$lang['nl_NL']['MathSpamProtection']['ELEVEN'] = 		'elf';
+$lang['nl_NL']['MathSpamProtection']['TWELVE'] = 		'twaalf';
+$lang['nl_NL']['MathSpamProtection']['THIRTEEN'] = 	'dertien';
+$lang['nl_NL']['MathSpamProtection']['FOURTEEN'] = 	'veertien';
+$lang['nl_NL']['MathSpamProtection']['FIFTEEN'] = 	'vijftien';
+$lang['nl_NL']['MathSpamProtection']['SIXTEEN'] = 	'zestien';
+$lang['nl_NL']['MathSpamProtection']['SEVENTEEN'] = 'zeventien';
+$lang['nl_NL']['MathSpamProtection']['EIGHTEEN'] = 	'achttien';
+$lang['nl_NL']['MathSpamProtection']['WHATIS'] = 'Hoeveel is %s plus %s?';
+$lang['nl_NL']['MathSpamProtectionField']['SPAMQUESTION'] = 'Anti-spam vraag: %s';
+$lang['nl_NL']['MathSpamProtectionField']['INCORRECTSOLUTION'] = 'Onjuist antwoord op de anti-spam vraag, probeer opnieuw.';
 
 ?>
