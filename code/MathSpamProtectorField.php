@@ -19,7 +19,7 @@ class MathSpamProtectorField extends SpamProtectorField {
 	 * @return HTML
 	 */
 	function Field($properties = array()) {
-		if(self::is_enabled($properties = array())) {
+		if(self::is_enabled()) {
 			$attributes = array(
 				'type' => 'text',
 				'class' => 'text ' . ($this->extraClass() ? $this->extraClass() : ''),
