@@ -1,0 +1,25 @@
+nl:
+  MathSpamProtection:
+    EIGHT: acht
+    EIGHTEEN: achtien
+    ELEVEN: elf
+    FIFTEEN: vijftien
+    FIVE: vijf
+    FOUR: vier
+    FOURTEEN: veertien
+    NINE: negen
+    ONE: een
+    SEVEN: zeven
+    SEVENTEEN: zeventien
+    SIX: zes
+    SIXTEEN: zestien
+    TEN: tien
+    THIRTEEN: dertien
+    THREE: drie
+    TWELVE: twaalf
+    TWO: twee
+    WHATIS: 'hoeveel is %s plus %s?'
+    ZERO: nul
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Onjuist antwoord op de anti-spam vraag, probeer opnieuw.'
+    SPAMQUESTION: 'Anti-spam vraag: %s'
