@@ -18,20 +18,19 @@ class MathSpamProtectorField extends SpamProtectorField {
 	 *
 	 * @return HTML
 	 */
-	function Field() {
-		if(self::is_enabled()) {
+	function Field($properties = array()) {
+		if(self::is_enabled($properties = array())) {
 			$attributes = array(
 				'type' => 'text',
 				'class' => 'text ' . ($this->extraClass() ? $this->extraClass() : ''),
 				'id' => $this->id(),
-				'name' => $this->Name(),
+				'name' => $this->getName(),
 	 			'value' => $this->Value(),
 				'title' => $this->Title(),
-				'tabindex' => $this->getTabIndex(),
+				'tabindex' => $this->getAttribute('tabindex'),
 				'maxlength' => ($this->maxLength) ? $this->maxLength : null,
 				'size' => ($this->maxLength) ? min( $this->maxLength, 30 ) : null
 			);
-
 			return $this->createTag('input', $attributes);
 		}
 	}
@@ -47,7 +46,7 @@ class MathSpamProtectorField extends SpamProtectorField {
 
 	/**
 	 * Validates the value submitted by the user with the one saved
-	 * into the {@link Session} and then notify callback object 
+	 * into the {@link Session} and then notify callback object
 	 * with the spam checking result.
 	 *
 	 * @return bool
@@ -60,8 +59,7 @@ class MathSpamProtectorField extends SpamProtectorField {
 				$this->name,
 				_t(
 					'MathSpamProtectionField.INCORRECTSOLUTION',
-					"Incorrect solution to the spam protection question, please try again.",
-					PR_MEDIUM
+					"Incorrect solution to the spam protection question, please try again."
 				),
 				"error"
 			);
