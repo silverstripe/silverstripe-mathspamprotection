@@ -1,0 +1,25 @@
+fr:
+  MathSpamProtection:
+    EIGHT: huit
+    EIGHTEEN: dix-huit
+    ELEVEN: onze
+    FIFTEEN: quinze
+    FIVE: cinq
+    FOUR: quatre
+    FOURTEEN: quatorze
+    NINE: neuf
+    ONE: un
+    SEVEN: sept
+    SEVENTEEN: seventeen
+    SIX: six
+    SIXTEEN: seize
+    TEN: dix
+    THIRTEEN: treize
+    THREE: trois
+    TWELVE: douze
+    TWO: deux
+    WHATIS: 'Combien font %s plus %s&nbsp?'
+    ZERO: z&eacute;ro
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Mauvaise r&eacute;ponse, essayez &agrave; nouveau.'
+    SPAMQUESTION: 'Question anti-spam&nbsp;: %s'

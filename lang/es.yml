@@ -1,0 +1,25 @@
+es:
+  MathSpamProtection:
+    EIGHT: ocho
+    EIGHTEEN: dieciocho
+    ELEVEN: once
+    FIFTEEN: quince
+    FIVE: cinco
+    FOUR: cuatro
+    FOURTEEN: catorce
+    NINE: nueve
+    ONE: uno
+    SEVEN: siete
+    SEVENTEEN: diecisiete
+    SIX: seis
+    SIXTEEN: 'diecis&eacute;is'
+    TEN: diez
+    THIRTEEN: trece
+    THREE: tres
+    TWELVE: doce
+    TWO: dos
+    WHATIS: '&iquest;Cu&aacute;nto suman %s y %s?'
+    ZERO: cero
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Respuesta err&oacute;nea, int&eacute;ntelo de nuevo.'
+    SPAMQUESTION: 'Pregunta anti-spam: %s'
