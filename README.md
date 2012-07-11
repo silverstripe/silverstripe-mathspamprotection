@@ -1,12 +1,9 @@
 # Math Spam Protection
 
-NOTE: this is alpha and not designed for production just yet. Please see the TODO.md
-file for remaining issues.
-
 ## Maintainers
 
  * Will Rossiter (Nickname: willr, wrossiter)
-  <will at silverstripe dot com>
+  <will at fullscreen dot io>
 
 ## Introduction
 
@@ -16,9 +13,9 @@ Includes an EditableMathSpamField to integrate with the UserForms module.
 
 ## Requirements
 
- * Spam Protection Trunk
- * SilverStripe Trunk
-
+ * SilverStripe 3.0
+ * Spam Protection Master
+ 
 ## Installation
 
 See docs/en/Installing.md
