@@ -50,7 +50,7 @@ class MathSpamProtectorField extends SpamProtectorField {
 	 * @return string
 	 */
 	function ATTTitle() {
-		return Convert::html2raw($this->Title());
+		return html_entity_decode($this->Title(), ENT_COMPAT , 'UTF-8');
 	}
 
 	/**
