@@ -1,0 +1,24 @@
+de:
+  MathSpamProtection:
+    EIGHT: Acht
+    EIGHTEEN: Achtzehn
+    FIFTEEN: Fünfzehn
+    FIVE: Fünf
+    FOUR: Vier
+    FOURTEEN: Vierzehn
+    NINE: Neun
+    ONE: Eins
+    SEVEN: Sieben
+    SEVENTEEN: Siebzehn
+    SIX: Sechs
+    SIXTEEN: Sechzehn
+    TEN: Zehn
+    THIRTEEN: Dreizehn
+    THREE: Drei
+    TWELVE: Zwölf
+    TWO: Zwei
+    WHATIS: 'Wieviel ergibt %s plus %s?'
+    ZERO: Null
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Die Rechenaufgabe zum Spamschutz wurde falsch gelöst!'
+    SPAMQUESTION: 'Spamschutzfrage: %s'
