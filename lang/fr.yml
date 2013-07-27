@@ -18,8 +18,8 @@ fr:
     THREE: trois
     TWELVE: douze
     TWO: deux
-    WHATIS: 'Combien font %s plus %s&nbsp?'
+    WHATIS: 'Combien font %s plus %s&nbsp;?'
     ZERO: z&eacute;ro
   MathSpamProtectionField:
-    INCORRECTSOLUTION: 'Mauvaise r&eacute;ponse, essayez &agrave; nouveau.'
+    INCORRECTSOLUTION: 'Mauvaise r&eacute;ponse&nbsp;!'
     SPAMQUESTION: 'Question anti-spam&nbsp;: %s'

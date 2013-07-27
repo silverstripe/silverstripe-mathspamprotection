@@ -26,7 +26,7 @@ class MathSpamProtectorField extends SpamProtectorField {
 				'id' => $this->id(),
 				'name' => $this->getName(),
 	 			'value' => $this->Value(),
-				'title' => $this->Title(),
+				'title' => $this->ATTTitle(),
 				'tabindex' => $this->getAttribute('tabindex'),
 				'maxlength' => ($this->maxLength) ? $this->maxLength : null,
 				'size' => ($this->maxLength) ? min( $this->maxLength, 30 ) : null
@@ -42,6 +42,15 @@ class MathSpamProtectorField extends SpamProtectorField {
 	 */
 	function Title() {
 		return sprintf(_t('MathSpamProtectionField.SPAMQUESTION', "Spam protection question: %s"), self::get_math_question());
+	}
+
+	/**
+	 * Returns the spam question for title attribute
+	 *
+	 * @return string
+	 */
+	function ATTTitle() {
+		return html_entity_decode($this->Title(), ENT_COMPAT , 'UTF-8');
 	}
 
 	/**
