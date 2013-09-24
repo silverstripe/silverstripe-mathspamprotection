@@ -107,7 +107,7 @@ class MathSpamProtectorField extends SpamProtectorField {
 		Session::clear('mathQuestionV1');
 		Session::clear('mathQuestionV2');
 
-		return (MathSpamProtectorField::digit_to_word($v1 + $v2) == $answer || ($v1 + $v2) == $answer);
+		return (MathSpamProtectorField::digit_to_word($v1 + $v2) == strtolower($answer) || ($v1 + $v2) == $answer);
 	}
 
 	/**
