@@ -6,33 +6,29 @@
  * @package mathspamprotection
  */
 
-class MathSpamProtectorField extends SpamProtectorField {
+class MathSpamProtectorField extends TextField {
 
 	/**
-	 * @var bool If MathSpamProtection is enabled
+	 * @config
+	 *
+	 * @var bool $enabled
 	 */
 	private static $enabled = true;
-
-	/**
-	 * Outputs the field HTML to the the web browser
-	 *
-	 * @return HTML
-	 */
-	function Field($properties = array()) {
-		if(self::is_enabled()) {
-			$attributes = array(
-				'type' => 'text',
-				'class' => 'text ' . ($this->extraClass() ? $this->extraClass() : ''),
-				'id' => $this->id(),
-				'name' => $this->getName(),
-	 			'value' => $this->Value(),
-				'title' => $this->Title(),
-				'tabindex' => $this->getAttribute('tabindex'),
-				'maxlength' => ($this->maxLength) ? $this->maxLength : null,
-				'size' => ($this->maxLength) ? min( $this->maxLength, 30 ) : null
-			);
-			return $this->createTag('input', $attributes);
+	
+	public function Field($properties = array()) {
+		if(Config::inst()->get('MathSpamProtectorField', 'enabled')) {
+			return parent::Field($properties);
 		}
+
+		return null;
+	}
+
+	public function FieldHolder($properties = array()) {
+		if(Config::inst()->get('MathSpamProtectorField', 'enabled')) {
+			return parent::FieldHolder($properties);
+		}
+
+		return null;
 	}
 
 	/**
@@ -40,21 +36,26 @@ class MathSpamProtectorField extends SpamProtectorField {
 	 *
 	 * @return string
 	 */
-	function Title() {
-		return sprintf(_t('MathSpamProtectionField.SPAMQUESTION', "Spam protection question: %s"), self::get_math_question());
+	public function Title() {
+		return sprintf(
+			_t('MathSpamProtectionField.SPAMQUESTION', "Spam protection question: %s"), 
+			self::get_math_question()
+		);
 	}
 
 	/**
-	 * Validates the value submitted by the user with the one saved
-	 * into the {@link Session} and then notify callback object
-	 * with the spam checking result.
+	 * Validates the value submitted by the user with the one saved into the 
+	 * {@link Session} and then notify callback object with the spam checking 
+	 * result.
 	 *
 	 * @return bool
 	 */
-	function validate($validator) {
-		if(!self::is_enabled()) return true;
+	public function validate($validator) {
+		if(!Config::inst()->get('MathSpamProtectorField', 'enabled')) {
+			return true;
+		}
 
-		if(!self::correct_answer($this->Value())){
+		if(!self::correct_answer($this->Value())) {
 			$validator->validationError(
 				$this->name,
 				_t(
@@ -63,6 +64,7 @@ class MathSpamProtectorField extends SpamProtectorField {
 				),
 				"error"
 			);
+
 			return false;
 		}
 
@@ -73,16 +75,16 @@ class MathSpamProtectorField extends SpamProtectorField {
 	/**
 	 * Creates the question from random variables, which are also saved to the session.
 	 *
-	 * @return String
+	 * @return string
 	 */
-	public static function get_math_question(){
-		if(!Session::get("mathQuestionV1")&&!Session::get("mathQuestionV2")){
+	public static function get_math_question() {
+		if(!Session::get("mathQuestionV1") && !Session::get("mathQuestionV2")) {
 			$v1 = rand(1,9);
 			$v2 = rand(1,9);
+
 			Session::set("mathQuestionV1",$v1);
 			Session::set("mathQuestionV2",$v2);
-		}
-		else{
+		} else {
 			$v1 = Session::get("mathQuestionV1");
 			$v2 = Session::get("mathQuestionV2");
 		}
@@ -95,7 +97,9 @@ class MathSpamProtectorField extends SpamProtectorField {
 	}
 
 	/**
-	 * Checks the given answer if it matches the addition of the saved session variables.
+	 * Checks the given answer if it matches the addition of the saved session 
+	 * variables.
+	 *
 	 * Users can answer using words or digits.
 	 *
 	 * @return bool
@@ -107,7 +111,9 @@ class MathSpamProtectorField extends SpamProtectorField {
 		Session::clear('mathQuestionV1');
 		Session::clear('mathQuestionV2');
 
-		return (MathSpamProtectorField::digit_to_word($v1 + $v2) == strtolower($answer) || ($v1 + $v2) == $answer);
+		$word = MathSpamProtectorField::digit_to_word($v1 + $v2);
+
+		return ($word == strtolower($answer) || ($v1 + $v2) == $answer);
 	}
 
 	/**
@@ -115,7 +121,7 @@ class MathSpamProtectorField extends SpamProtectorField {
 	 *
 	 * @return string
 	 */
-	static function digit_to_word($num){
+	public static function digit_to_word($num){
 		$numbers = array(_t('MathSpamProtection.ZERO', 'zero'),
 			_t('MathSpamProtection.ONE', 'one'),
 			_t('MathSpamProtection.TWO', 'two'),
@@ -139,23 +145,5 @@ class MathSpamProtectorField extends SpamProtectorField {
 			if($num < 0) return "minus ".($numbers[-1*$num]);
 
 		return $numbers[$num];
-	}
-
-	/**
-	 * Returns true when math spam protection is enabled
-	 *
-	 * @return bool
-	 */
-	public static function is_enabled() {
-		return (bool) self::$enabled;
-	}
-
-	/**
-	 * Set whether math spam protection is enabled
-	 *
-	 * @param bool
-	 */
-	public static function set_enabled($enabled = true) {
-		self::$enabled = $enabled;
 	}
 }
