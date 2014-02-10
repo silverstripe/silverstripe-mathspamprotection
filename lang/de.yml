@@ -2,6 +2,7 @@ de:
   MathSpamProtection:
     EIGHT: Acht
     EIGHTEEN: Achtzehn
+    ELEVEN: Elf
     FIFTEEN: Fünfzehn
     FIVE: Fünf
     FOUR: Vier
@@ -17,8 +18,8 @@ de:
     THREE: Drei
     TWELVE: Zwölf
     TWO: Zwei
-    WHATIS: 'Wieviel ergibt %s plus %s?'
+    WHATIS: 'Wieviel ist %s plus %s?'
     ZERO: Null
   MathSpamProtectionField:
-    INCORRECTSOLUTION: 'Die Rechenaufgabe zum Spamschutz wurde falsch gelöst!'
-    SPAMQUESTION: 'Spamschutzfrage: %s'
+    INCORRECTSOLUTION: 'Falsche Antwort zur Spam-Schutz-Frage, bitte noch einmal versuchen.'
+    SPAMQUESTION: 'Spam Schutz Frage: %s'
