@@ -1,0 +1,25 @@
+fi:
+  MathSpamProtection:
+    EIGHT: kahdeksan
+    EIGHTEEN: kahdeksantoista
+    ELEVEN: yksitoista
+    FIFTEEN: viisitoista
+    FIVE: viisi
+    FOUR: neljä
+    FOURTEEN: neljätoista
+    NINE: yhdeksän
+    ONE: yksi
+    SEVEN: seitsemän
+    SEVENTEEN: seitsemäntoista
+    SIX: kuusi
+    SIXTEEN: kuusitoista
+    TEN: kymmenen
+    THIRTEEN: kolmetoista
+    THREE: kolme
+    TWELVE: kaksitoista
+    TWO: kaksi
+    WHATIS: 'paljonko on %s ynnä %s?'
+    ZERO: nolla
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Roskapostisuojakysymyksen vastaus on väärin, yritä uudelleen.'
+    SPAMQUESTION: 'Roskapostisuojakysymys: %s'
