@@ -14,5 +14,10 @@ class MathSpamProtector implements SpamProtector {
 	public function getFormField($name = null, $title = null, $value = null) {
 		return new MathSpamProtectorField($name, $title, $value);
 	}
-	
+
+	/**
+	 * Not used by MathSpamProtector
+	 */
+	public function setFieldMapping($fieldMapping) {}
+
 }
