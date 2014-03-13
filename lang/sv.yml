@@ -1,4 +1,4 @@
-en:
+sv:
   MathSpamProtection:
     EIGHT: 'åtta'
     EIGHTEEN: arton
@@ -21,5 +21,5 @@ en:
     WHATIS: 'vad blir %s plus %s?'
     ZERO: noll
   MathSpamProtectionField:
-    INCORRECTSOLUTION: 'Felaktigt svar på spamskyddsfrågan, vänligen försök igen.'
-    SPAMQUESTION: 'Spamskyddsfråga: %s'
+    INCORRECTSOLUTION: 'Felaktigt svar på kontrollfrågan, vänligen försök igen.'
+    SPAMQUESTION: 'Kontrollfråga: %s'
