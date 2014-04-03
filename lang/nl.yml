@@ -18,7 +18,7 @@ nl:
     THREE: drie
     TWELVE: twaalf
     TWO: twee
-    WHATIS: 'hoeveel is %s plus %s?'
+    WHATIS: 'Hoeveel is %s plus %s?'
     ZERO: nul
   MathSpamProtectionField:
     INCORRECTSOLUTION: 'Onjuist antwoord op de anti-spam vraag, probeer opnieuw.'
