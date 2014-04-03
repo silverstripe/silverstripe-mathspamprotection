@@ -1,0 +1,25 @@
+sv:
+  MathSpamProtection:
+    EIGHT: 'åtta'
+    EIGHTEEN: arton
+    ELEVEN: elva
+    FIFTEEN: femton
+    FIVE: fem
+    FOUR: fyra
+    FOURTEEN: fjorton
+    NINE: nio
+    ONE: ett
+    SEVEN: sju
+    SEVENTEEN: sjutton
+    SIX: sex
+    SIXTEEN: sexton
+    TEN: tio
+    THIRTEEN: tretton
+    THREE: tre
+    TWELVE: tolv
+    TWO: 'två'
+    WHATIS: 'vad blir %s plus %s?'
+    ZERO: noll
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Felaktigt svar på kontrollfrågan, vänligen försök igen.'
+    SPAMQUESTION: 'Kontrollfråga: %s'
