@@ -146,4 +146,8 @@ class MathSpamProtectorField extends TextField {
 
 		return $numbers[$num];
 	}
+
+	public function Type() {
+		return 'mathspamprotector text';
+	}
 }
