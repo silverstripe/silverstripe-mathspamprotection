@@ -14,6 +14,13 @@ class MathSpamProtectorField extends TextField {
 	 * @var bool $enabled
 	 */
 	private static $enabled = true;
+
+	/**
+	 * @config
+	 *
+	 * @var string
+	 */
+	private static $question_prefix;
 	
 	public function Field($properties = array()) {
 		if(Config::inst()->get('MathSpamProtectorField', 'enabled')) {
@@ -37,8 +44,14 @@ class MathSpamProtectorField extends TextField {
 	 * @return string
 	 */
 	public function Title() {
+		$prefix = Config::inst()->get('MathSpamProtection', 'question_prefix');
+
+		if(!$prefix) {
+			$prefix = _t('MathSpamProtectionField.SPAMQUESTION', "Spam protection question: %s");
+		}
+
 		return sprintf(
-			_t('MathSpamProtectionField.SPAMQUESTION', "Spam protection question: %s"), 
+			$prefix,
 			self::get_math_question()
 		);
 	}
