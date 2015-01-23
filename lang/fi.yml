@@ -18,7 +18,7 @@ fi:
     THREE: kolme
     TWELVE: kaksitoista
     TWO: kaksi
-    WHATIS: 'paljonko on %s ynnä %s?'
+    WHATIS: 'paljonko on %s plus %s?'
     ZERO: nolla
   MathSpamProtectionField:
     INCORRECTSOLUTION: 'Roskapostisuojakysymyksen vastaus on väärin, yritä uudelleen.'
