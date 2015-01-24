@@ -14,6 +14,20 @@ class MathSpamProtectorField extends TextField {
 	 * @var bool $enabled
 	 */
 	private static $enabled = true;
+
+	/**
+	 * @config
+	 *
+	 * @var string
+	 */
+	private static $question_prefix;
+	
+	/**
+	 * @config
+	 *
+	 * @var bool $allow_numeric_answer
+	 */
+	private static $allow_numeric_answer = true;
 	
 	public function Field($properties = array()) {
 		if(Config::inst()->get('MathSpamProtectorField', 'enabled')) {
@@ -37,8 +51,14 @@ class MathSpamProtectorField extends TextField {
 	 * @return string
 	 */
 	public function Title() {
+		$prefix = Config::inst()->get('MathSpamProtection', 'question_prefix');
+
+		if(!$prefix) {
+			$prefix = _t('MathSpamProtectionField.SPAMQUESTION', "Spam protection question: %s");
+		}
+
 		return sprintf(
-			_t('MathSpamProtectionField.SPAMQUESTION', "Spam protection question: %s"), 
+			$prefix,
 			self::get_math_question()
 		);
 	}
@@ -113,7 +133,8 @@ class MathSpamProtectorField extends TextField {
 
 		$word = MathSpamProtectorField::digit_to_word($v1 + $v2);
 
-		return ($word == strtolower($answer) || ($v1 + $v2) == $answer);
+		$allow_numeric_answer = Config::inst()->get('MathSpamProtectorField', 'allow_numeric_answer');
+		return ($word == strtolower($answer) || ((($v1 + $v2) == $answer) and $allow_numeric_answer));
 	}
 
 	/**
@@ -145,5 +166,9 @@ class MathSpamProtectorField extends TextField {
 			if($num < 0) return "minus ".($numbers[-1*$num]);
 
 		return $numbers[$num];
+	}
+
+	public function Type() {
+		return 'mathspamprotector text';
 	}
 }
