@@ -1,0 +1,25 @@
+da:
+  MathSpamProtection:
+    EIGHT: otte
+    EIGHTEEN: atten
+    ELEVEN: elve
+    FIFTEEN: femten
+    FIVE: fem
+    FOUR: fire
+    FOURTEEN: fjorten
+    NINE: ni
+    ONE: en
+    SEVEN: syv
+    SEVENTEEN: sytten
+    SIX: seks
+    SIXTEEN: seksten
+    TEN: ti
+    THIRTEEN: tretten
+    THREE: tre
+    TWELVE: tolv
+    TWO: to
+    WHATIS: 'hvad er %s plus %s?'
+    ZERO: nul
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Forkert løsning til spam-beskyttelses-spørgsmålet, prøv igen.'
+    SPAMQUESTION: 'Spam-beskyttelses-spørgsmål: %s'
