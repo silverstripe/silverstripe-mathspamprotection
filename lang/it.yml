@@ -1,0 +1,25 @@
+it:
+  MathSpamProtection:
+    EIGHT: otto
+    EIGHTEEN: diciotto
+    ELEVEN: undici
+    FIFTEEN: quindici
+    FIVE: cinque
+    FOUR: quattro
+    FOURTEEN: quattordici
+    NINE: nove
+    ONE: uno
+    SEVEN: sette
+    SEVENTEEN: diciasette
+    SIX: sei
+    SIXTEEN: sedici
+    TEN: dieci
+    THIRTEEN: tredici
+    THREE: tre
+    TWELVE: dodici
+    TWO: due
+    WHATIS: 'quanto fa %s più %s?'
+    ZERO: zero
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Soluzione non corretta per la domanda di protezione. Riprova.'
+    SPAMQUESTION: 'Domanda di protezione: %s'
