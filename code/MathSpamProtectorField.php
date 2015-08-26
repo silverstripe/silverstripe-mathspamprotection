@@ -22,6 +22,13 @@ class MathSpamProtectorField extends TextField {
 	 */
 	private static $question_prefix;
 	
+	/**
+	 * @config
+	 *
+	 * @var bool $allow_numeric_answer
+	 */
+	private static $allow_numeric_answer = true;
+	
 	public function Field($properties = array()) {
 		if(Config::inst()->get('MathSpamProtectorField', 'enabled')) {
 			return parent::Field($properties);
@@ -126,7 +133,8 @@ class MathSpamProtectorField extends TextField {
 
 		$word = MathSpamProtectorField::digit_to_word($v1 + $v2);
 
-		return ($word == strtolower($answer) || ($v1 + $v2) == $answer);
+		$allow_numeric_answer = Config::inst()->get('MathSpamProtectorField', 'allow_numeric_answer');
+		return ($word == strtolower($answer) || ((($v1 + $v2) == $answer) and $allow_numeric_answer));
 	}
 
 	/**
