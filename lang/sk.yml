@@ -1,0 +1,25 @@
+sk:
+  MathSpamProtection:
+    EIGHT: osem
+    EIGHTEEN: osemnásť
+    ELEVEN: jedenásť
+    FIFTEEN: pätnásť
+    FIVE: päť
+    FOUR: štyri
+    FOURTEEN: štrnásť
+    NINE: deväť
+    ONE: jedna
+    SEVEN: sedem
+    SEVENTEEN: sedemnásť
+    SIX: šesť
+    SIXTEEN: šestnásť
+    TEN: desať
+    THIRTEEN: trinásť
+    THREE: tri
+    TWELVE: dvanásť
+    TWO: dva
+    WHATIS: 'koľko je %s plus %s?'
+    ZERO: nula
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Zlá odpoveď na otázku proti spamu, prosím skúste odpovedať znovu.'
+    SPAMQUESTION: 'Otázka proti spamu: %s'
