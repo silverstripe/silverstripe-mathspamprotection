@@ -10,5 +10,6 @@
 	"minimum-stability": "dev",
 	"require": {
 		"silverstripe/spamprotection": "dev-master"
-	}
+	},
+	"license": "BSD-3-Clause"
 }
