@@ -1,0 +1,25 @@
+hr:
+  MathSpamProtection:
+    EIGHT: osam
+    EIGHTEEN: osamnaest
+    ELEVEN: jedanaest
+    FIFTEEN: petnaest
+    FIVE: pet
+    FOUR: četiri
+    FOURTEEN: četrnaest
+    NINE: devet
+    ONE: jedan
+    SEVEN: sedam
+    SEVENTEEN: sedamnaest
+    SIX: šest
+    SIXTEEN: šesnaest
+    TEN: deset
+    THIRTEEN: trinaest
+    THREE: tri
+    TWELVE: dvanaest
+    TWO: dva
+    WHATIS: 'Koliko je %s plus %s?'
+    ZERO: nula
+  MathSpamProtectionField:
+    INCORRECTSOLUTION: 'Vaš odgovor na pitanje za zaštitu od spama je neispravan, pokušajte ponovo.'
+    SPAMQUESTION: '%s'
