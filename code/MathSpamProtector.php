@@ -22,4 +22,7 @@ class MathSpamProtector implements SpamProtector
     public function setFieldMapping($fieldMapping)
     {
     }
+
+    public function __construct($options = array()) {
+    }
 }
