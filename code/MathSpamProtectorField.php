@@ -1,4 +1,5 @@
 <?php
+namespace SilverStripe\SpamProtection\Maths;
 
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Control\Session;
@@ -25,14 +26,14 @@ class MathSpamProtectorField extends TextField
      * @var string
      */
     private static $question_prefix;
-    
+
     /**
      * @config
      *
      * @var bool $allow_numeric_answer
      */
     private static $allow_numeric_answer = true;
-    
+
     public function Field($properties = array())
     {
         if (Config::inst()->get('MathSpamProtectorField', 'enabled')) {
@@ -71,8 +72,8 @@ class MathSpamProtectorField extends TextField
     }
 
     /**
-     * Validates the value submitted by the user with the one saved into the 
-     * {@link Session} and then notify callback object with the spam checking 
+     * Validates the value submitted by the user with the one saved into the
+     * {@link Session} and then notify callback object with the spam checking
      * result.
      *
      * @return bool
@@ -126,7 +127,7 @@ class MathSpamProtectorField extends TextField
     }
 
     /**
-     * Checks the given answer if it matches the addition of the saved session 
+     * Checks the given answer if it matches the addition of the saved session
      * variables.
      *
      * Users can answer using words or digits.
