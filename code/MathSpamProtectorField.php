@@ -1,5 +1,9 @@
 <?php
 
+use SilverStripe\Core\Config\Config;
+use SilverStripe\Control\Session;
+use SilverStripe\Forms\TextField;
+
 /**
  * {@link FormField} for adding an optional maths protection question to a form.
  *
