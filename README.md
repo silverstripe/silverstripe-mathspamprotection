@@ -38,5 +38,5 @@ Set the default spam protector in *mysite/_config/spamprotection.yml*
 	---
 	name: spamprotection
 	---
-	FormSpamProtectionExtension:
-	  default_spam_protector: MathSpamProtector
+    SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+	  default_spam_protector: SilverStripe\SpamProtection\Maths\MathSpamProtector
