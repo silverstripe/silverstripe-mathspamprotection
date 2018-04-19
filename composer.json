@@ -11,5 +11,10 @@
 	"require": {
 		"silverstripe/spamprotection": "^2"
 	},
+    "autoload": {
+        "psr-4": {
+            "SilverStripe\\SpamProtection\\Maths": "code/"
+        }
+    },
 	"license": "BSD-3-Clause"
 }
