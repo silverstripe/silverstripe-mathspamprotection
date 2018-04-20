@@ -4,7 +4,7 @@
  * @package mathspamprotection
  */
 
-namespace SilverStripe\SpamProtection\Maths;
+namespace SilverStripe\MathSpamProtection;
 
 use SilverStripe\SpamProtection\SpamProtector;
 

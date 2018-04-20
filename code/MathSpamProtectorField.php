@@ -1,5 +1,5 @@
 <?php
-namespace SilverStripe\SpamProtection\Maths;
+namespace SilverStripe\MathSpamProtection;
 
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Config\Config;
