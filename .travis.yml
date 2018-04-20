@@ -36,9 +36,6 @@ before_script:
 
   - php vendor/silverstripe/framework/tests/dump_constants.php
 
-  - ls -lh
-  - find . | grep tests
-
 script:
   - if [[ $PHPUNIT_COVERAGE_TEST ]]; then phpdbg -qrr vendor/bin/phpunit --coverage-clover=coverage.xml tests/; fi
 
