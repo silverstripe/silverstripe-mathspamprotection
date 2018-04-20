@@ -1,7 +1,7 @@
 {
 	"name": "silverstripe/mathspamprotection",
 	"description": "This module provides a simple math protection mechanism for prevent spam from your forms.Includes an EditableMathSpamField to integrate with the UserForms module.",
-	"type": "silverstripe-module",
+	"type": "silverstripe-vendormodule",
 	"keywords": ["silverstripe", "spamprotection", "mathspamprotection"],
 	"authors": [{
 		"name": "Will Rossiter",
@@ -9,7 +9,7 @@
 	}],
 	"minimum-stability": "dev",
 	"require": {
-		"silverstripe/spamprotection": "^2"
+		"silverstripe/spamprotection": "^3"
 	},
     "autoload": {
         "psr-4": {
