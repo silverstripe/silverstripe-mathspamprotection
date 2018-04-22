@@ -36,7 +36,7 @@ composer require "silverstripe/mathspamprotection:dev-master"
 Set the default spam protector in *mysite/_config/spamprotection.yml*
 
 	---
-	name: spamprotection
-	---
-	FormSpamProtectionExtension:
-	  default_spam_protector: MathSpamProtector
+    name: myspamprotection
+    ---
+    SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+      default_spam_protector: SilverStripe\MathSpamProtection\MathSpamProtector

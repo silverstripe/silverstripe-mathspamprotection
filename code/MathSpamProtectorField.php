@@ -1,4 +1,10 @@
 <?php
+namespace SilverStripe\MathSpamProtection;
+
+use SilverStripe\Control\Controller;
+use SilverStripe\Core\Config\Config;
+use SilverStripe\Control\Session;
+use SilverStripe\Forms\TextField;
 
 /**
  * {@link FormField} for adding an optional maths protection question to a form.
@@ -21,17 +27,17 @@ class MathSpamProtectorField extends TextField
      * @var string
      */
     private static $question_prefix;
-    
+
     /**
      * @config
      *
      * @var bool $allow_numeric_answer
      */
     private static $allow_numeric_answer = true;
-    
+
     public function Field($properties = array())
     {
-        if (Config::inst()->get('MathSpamProtectorField', 'enabled')) {
+        if ($this->config()->get('enabled')) {
             return parent::Field($properties);
         }
 
@@ -40,7 +46,7 @@ class MathSpamProtectorField extends TextField
 
     public function FieldHolder($properties = array())
     {
-        if (Config::inst()->get('MathSpamProtectorField', 'enabled')) {
+        if ($this->config()->get('enabled')) {
             return parent::FieldHolder($properties);
         }
 
@@ -54,7 +60,7 @@ class MathSpamProtectorField extends TextField
      */
     public function Title()
     {
-        $prefix = Config::inst()->get('MathSpamProtection', 'question_prefix');
+        $prefix = $this->config()->get('question_prefix');
 
         if (!$prefix) {
             $prefix = _t('MathSpamProtectionField.SPAMQUESTION', "Spam protection question: %s");
@@ -62,24 +68,24 @@ class MathSpamProtectorField extends TextField
 
         return sprintf(
             $prefix,
-            self::get_math_question()
+            $this->getMathsQuestion()
         );
     }
 
     /**
-     * Validates the value submitted by the user with the one saved into the 
-     * {@link Session} and then notify callback object with the spam checking 
+     * Validates the value submitted by the user with the one saved into the
+     * {@link Session} and then notify callback object with the spam checking
      * result.
      *
      * @return bool
      */
     public function validate($validator)
     {
-        if (!Config::inst()->get('MathSpamProtectorField', 'enabled')) {
+        if (!$this->config()->get( 'enabled')) {
             return true;
         }
 
-        if (!self::correct_answer($this->Value())) {
+        if (!$this->isCorrectAnswer($this->Value())) {
             $validator->validationError(
                 $this->name,
                 _t(
@@ -101,17 +107,20 @@ class MathSpamProtectorField extends TextField
      *
      * @return string
      */
-    public static function get_math_question()
+    public function getMathsQuestion()
     {
-        if (!Session::get("mathQuestionV1") && !Session::get("mathQuestionV2")) {
+        /** @var Session $session */
+        $session = Controller::curr()->getRequest()->getSession();
+
+        if (!$session->get("mathQuestionV1") && !$session->get("mathQuestionV2")) {
             $v1 = rand(1, 9);
             $v2 = rand(1, 9);
 
-            Session::set("mathQuestionV1", $v1);
-            Session::set("mathQuestionV2", $v2);
+            $session->set("mathQuestionV1", $v1);
+            $session->set("mathQuestionV2", $v2);
         } else {
-            $v1 = Session::get("mathQuestionV1");
-            $v2 = Session::get("mathQuestionV2");
+            $v1 = $session->get("mathQuestionV1");
+            $v2 = $session->get("mathQuestionV2");
         }
 
         return sprintf(
@@ -122,24 +131,27 @@ class MathSpamProtectorField extends TextField
     }
 
     /**
-     * Checks the given answer if it matches the addition of the saved session 
+     * Checks the given answer if it matches the addition of the saved session
      * variables.
      *
      * Users can answer using words or digits.
      *
      * @return bool
      */
-    public static function correct_answer($answer)
+    public function isCorrectAnswer($answer)
     {
-        $v1 = Session::get("mathQuestionV1");
-        $v2 = Session::get("mathQuestionV2");
 
-        Session::clear('mathQuestionV1');
-        Session::clear('mathQuestionV2');
+        $session = Controller::curr()->getRequest()->getSession();
+
+        $v1 = $session->get("mathQuestionV1");
+        $v2 = $session->get("mathQuestionV2");
+
+        $session->clear('mathQuestionV1');
+        $session->clear('mathQuestionV2');
 
         $word = MathSpamProtectorField::digit_to_word($v1 + $v2);
 
-        return ($word == strtolower($answer) || (Config::inst()->get('MathSpamProtectorField', 'allow_numeric_answer') && (($v1 + $v2) == $answer)));
+        return ($word == strtolower($answer) || ($this->config()->get('allow_numeric_answer') && (($v1 + $v2) == $answer)));
     }
 
     /**

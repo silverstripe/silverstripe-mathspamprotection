@@ -4,6 +4,10 @@
  * @package mathspamprotection
  */
 
+namespace SilverStripe\MathSpamProtection;
+
+use SilverStripe\SpamProtection\SpamProtector;
+
 class MathSpamProtector implements SpamProtector
 {
     /**
