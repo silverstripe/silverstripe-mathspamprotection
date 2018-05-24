@@ -16,5 +16,10 @@
             "SilverStripe\\MathSpamProtection\\": "code/"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        }
+    },
 	"license": "BSD-3-Clause"
 }
