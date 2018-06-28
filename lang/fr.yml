@@ -10,7 +10,7 @@ fr:
     NINE: neuf
     ONE: un
     SEVEN: sept
-    SEVENTEEN: seventeen
+    SEVENTEEN: dix-sept
     SIX: six
     SIXTEEN: seize
     TEN: dix
@@ -18,8 +18,8 @@ fr:
     THREE: trois
     TWELVE: douze
     TWO: deux
-    WHATIS: 'Combien font %s plus %s&nbsp?'
-    ZERO: z&eacute;ro
+    WHATIS: 'Combien font %s plus %s ?'
+    ZERO: zéro
   MathSpamProtectionField:
-    INCORRECTSOLUTION: 'Mauvaise r&eacute;ponse, essayez &agrave; nouveau.'
-    SPAMQUESTION: 'Question anti-spam&nbsp;: %s'
+    INCORRECTSOLUTION: 'Mauvaise réponse, essayez à nouveau.'
+    SPAMQUESTION: 'Question anti-spam : %s'

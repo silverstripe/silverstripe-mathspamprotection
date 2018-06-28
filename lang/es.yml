@@ -12,14 +12,14 @@ es:
     SEVEN: siete
     SEVENTEEN: diecisiete
     SIX: seis
-    SIXTEEN: 'diecis&eacute;is'
+    SIXTEEN: 'dieciséis'
     TEN: diez
     THIRTEEN: trece
     THREE: tres
     TWELVE: doce
     TWO: dos
-    WHATIS: '&iquest;Cu&aacute;nto suman %s y %s?'
+    WHATIS: '¿Cuánto suman %s y %s?'
     ZERO: cero
   MathSpamProtectionField:
-    INCORRECTSOLUTION: 'Respuesta err&oacute;nea, int&eacute;ntelo de nuevo.'
+    INCORRECTSOLUTION: 'Respuesta errónea, inténtelo de nuevo.'
     SPAMQUESTION: 'Pregunta anti-spam: %s'
