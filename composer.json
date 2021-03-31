@@ -1,16 +1,22 @@
 {
-	"name": "silverstripe/mathspamprotection",
-	"description": "This module provides a simple math protection mechanism for prevent spam from your forms.Includes an EditableMathSpamField to integrate with the UserForms module.",
-	"type": "silverstripe-vendormodule",
-	"keywords": ["silverstripe", "spamprotection", "mathspamprotection"],
-	"authors": [{
-		"name": "Will Rossiter",
-		"email": "will@fullscreen.io"
-	}],
-	"minimum-stability": "dev",
-	"require": {
-		"silverstripe/spamprotection": "^3"
-	},
+    "name": "silverstripe/mathspamprotection",
+    "description": "This module provides a simple math protection mechanism for prevent spam from your forms.Includes an EditableMathSpamField to integrate with the UserForms module.",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "spamprotection",
+        "mathspamprotection"
+    ],
+    "authors": [
+        {
+            "name": "Will Rossiter",
+            "email": "will@fullscreen.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "silverstripe/spamprotection": "^3"
+    },
     "autoload": {
         "psr-4": {
             "SilverStripe\\MathSpamProtection\\": "code/"
@@ -21,5 +27,5 @@
             "dev-master": "3.x-dev"
         }
     },
-	"license": "BSD-3-Clause"
+    "license": "BSD-3-Clause"
 }
