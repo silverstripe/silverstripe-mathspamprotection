@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SilverStripe\\MathSpamProtection\\": "code/"
+            "SilverStripe\\MathSpamProtection\\": "src/"
         }
     },
     "extra": {

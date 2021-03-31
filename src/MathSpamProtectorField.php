@@ -1,4 +1,5 @@
 <?php
+
 namespace SilverStripe\MathSpamProtection;
 
 use SilverStripe\Control\Controller;
@@ -85,7 +86,13 @@ class MathSpamProtectorField extends TextField
             return true;
         }
 
-        if (!$this->isCorrectAnswer($this->Value())) {
+        $value = Controller::curr()->getRequest()->postVar($this->getName());
+
+        if (!$value) {
+            $value = $this->Value();
+        }
+
+        if (!$this->isCorrectAnswer($value)) {
             $validator->validationError(
                 $this->name,
                 _t(
@@ -140,7 +147,6 @@ class MathSpamProtectorField extends TextField
      */
     public function isCorrectAnswer($answer)
     {
-
         $session = Controller::curr()->getRequest()->getSession();
 
         $v1 = $session->get("mathQuestionV1");
