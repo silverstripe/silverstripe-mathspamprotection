@@ -151,7 +151,7 @@ class MathSpamProtectorField extends TextField
 
         $word = MathSpamProtectorField::digit_to_word($v1 + $v2);
 
-        return ($word == strtolower($answer) || ($this->config()->get('allow_numeric_answer') && (($v1 + $v2) == $answer)));
+        return ($word == strtolower($answer) || ($this->config()->get('allow_numeric_answer') && (($v1 + $v2) === $answer)));
     }
 
     /**
