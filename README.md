@@ -1,12 +1,5 @@
 # Math Spam Protection
 
-## Maintainers
-
- * Will Rossiter (Nickname: willr, wrossiter)
-  <will at fullscreen dot io>
-
-## Introduction
-
 This module provides a simple math protection mechanism for prevent spam on your 
 forms. It will ask the user to complete an equation such as "three plus seven".
 
@@ -17,7 +10,7 @@ Includes an EditableMathSpamField to integrate with the UserForms module.
 
 ## Requirements
 
- * SilverStripe 3.1
+ * SilverStripe 4
  * Spam Protection
  
 ## Install Spam Protection Module
